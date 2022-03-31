@@ -23,12 +23,29 @@ public class LevelManager : SingletonBase<LevelManager>
     {
         pointer.CalculateScore();
 
+        /*
+        Р»СѓС‡С€Рµ РЅР°РїРёСЃР°С‚СЊ
 
+        if (chip.chipIndex == pointer.Index)
+        {
+            Wallet.Instance.WinCash(Wallet.Instance.Bet * 5);
+        }
+        else if (pointer.Colot == chip.ColorChip)
+        {
+            print("пїЅпїЅпїЅпїЅпїЅпїЅ");
+            Wallet.Instance.WinCash(Wallet.Instance.Bet * 2);
+        }
+        else
+        {
+            Wallet.Instance.LoseCash();
+            print("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+        }
+        */
         if(chip.chipIndex == pointer.Index || pointer.Colot == chip.ColorChip)
         {
             if (pointer.Colot == chip.ColorChip)
             {
-                print("Победа");
+                print("пїЅпїЅпїЅпїЅпїЅпїЅ");
                 Wallet.Instance.WinCash(Wallet.Instance.Bet * 2);
             }
             if(chip.chipIndex == pointer.Index)
@@ -39,7 +56,7 @@ public class LevelManager : SingletonBase<LevelManager>
         else
         {
             Wallet.Instance.LoseCash();
-            print("Поражение");
+            print("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         }
         
         StartCoroutine(CorStopTape());

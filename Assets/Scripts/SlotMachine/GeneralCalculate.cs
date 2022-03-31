@@ -22,15 +22,27 @@ public class GeneralCalculate : MonoBehaviour
         }
     }
     /// <summary>
-    /// ���������� ������� ������
+    /// ���������� ������� ������
     /// </summary>
     public void CheckSlots()
     {
         if (slotMachine.ActiveSlotMachine == false)
         {
+            /*
+            switch/case является нежелательной структурой, он слишком большой, можно уменьшить
+            сначала нужен массив со значениями, которые можно передавать в WinCash
+
+            int[] winValues = new int[] {100, 200, 300, 500, 1000, 2500};
+
             if (calculate1.Index == calculate2.Index && calculate1.Index == calculate3.Index)
             {
-                print("��������");
+                int winValue = winValues[calculate1.Index];
+                Wallet.Instance.WinCash(winValue);
+            }
+            */
+            if (calculate1.Index == calculate2.Index && calculate1.Index == calculate3.Index)
+            {
+                print("��������");
                 switch(calculate1.Index)
                 {
                     case 0:

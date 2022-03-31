@@ -8,6 +8,81 @@ public class ButtonListener : MonoBehaviour
     [SerializeField] private SlotMachine slotMachine;
     [SerializeField] private TorqueController torqueController;
     [SerializeField] private Button autoSpin, maxBet, minus, plus;
+
+    /*
+    может лучше сделать метод
+
+    private void changeInteractivity(bool flag) {
+        autoSpin.interactable = flag;
+        maxBet.interactable = flag;
+        minus.interactable = flag;
+        plus.interactable = flag;
+    }
+
+    ещё вариант, создать массив с элементами, которым надо обновить интерактивность
+
+    Button[] buttons = new Button[] {autoSpin, maxBet, minus, plus}
+    private void changeInteractivity(bool flag) {
+        foreach (Button btn in buttons) {
+            btn.interactable = flag;
+        }
+    }
+
+    дальше код можно уменьшить до
+
+    private void Update()
+    {
+        if (slotMachine)
+        {
+            if (slotMachine.ActiveSlotMachine)
+            {
+                changeInteractivity(false);
+            }
+            if (!slotMachine.ActiveSlotMachine)
+            {
+                changeInteractivity(true);
+            }
+        }
+        if (torqueController)
+        {
+            if (torqueController.ActiveTape)
+            {
+                changeInteractivity(false);
+            }
+            if (!torqueController.ActiveTape)
+            {
+                changeInteractivity(true);
+            }
+        }
+    }
+
+    или
+
+    private void Update()
+    {
+        if (slotMachine)
+        {
+            const bool flag = slotMachine.ActiveSlotMachine ? false : true;
+            changeInteractivity(flag);
+        }
+        if (torqueController)
+        {
+            const bool flag = itorqueController.ActiveTape ? false : true;
+            changeInteractivity(flag);
+        }
+    }
+
+    или
+
+    private void Update()
+    {
+        if (slotMachine || torqueController)
+        {
+            var bool flag = slotMachine.ActiveSlotMachine ? false : true;
+            changeInteractivity(flag);
+        }
+    }
+    */
     private void Update()
     {
         if (slotMachine)

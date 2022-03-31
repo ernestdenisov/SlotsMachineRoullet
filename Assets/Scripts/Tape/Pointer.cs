@@ -23,7 +23,7 @@ public class Pointer : MonoBehaviour
 
     [SerializeField] private float angularZ;
     /// <summary>
-    /// Длина деления в проекте равен 36
+    /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 36
     /// </summary>
     private int lenght;
     
@@ -57,7 +57,7 @@ public class Pointer : MonoBehaviour
     {
         foreach (var c in cells)
         {
-            if(c.range.x < angularZ && c.range.y> angularZ)
+            if(c.range.x < angularZ && c.range.y > angularZ) // СЃРёР»СЊРЅРѕ СЌС‚РѕС‚ Рё СЃР»РµРґСѓСЋС‰РёР№ if РѕС‚Р»РёС‡Р°СЋС‚СЃСЏ?))
             {
                 color = c.colorCell;
             }

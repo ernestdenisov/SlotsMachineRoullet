@@ -6,11 +6,11 @@ public class TorqueController : MonoBehaviour
 {
     [SerializeField] private float speed;
     /// <summary>
-    /// Максимальная и минимальная скорость
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     [SerializeField] private float speedMax,speedMin;
     /// <summary>
-    /// Замедлитель
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     [SerializeField] private float retarder;
     [SerializeField] private bool activeTape;
@@ -21,6 +21,12 @@ public class TorqueController : MonoBehaviour
     {
         speed = Random.Range(speedMin, speedMax);
     }
+
+    /*
+    РµСЃР»Рё Сѓ С‚РµР±СЏ С‚РѕР»СЊРєРѕ 2 РІР°СЂРёР°РЅС‚Р° СЂР°Р·РІРёС‚РёСЏ СЃРѕР±С‹С‚РёР№ РЅР°РїСЂРёРјРµСЂ activeTape Рё !activeTape, С‚Рѕ Р»СѓС‡С€Рµ
+    РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ if (activeTape) {} else {}
+    РІРјРµСЃС‚Рѕ if(activeTape) {} else if (!activeTape) {}
+    */
     private void Update()
     {
         if (activeTape)
